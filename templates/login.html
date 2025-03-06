@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% block 'body' %}
+<style>
+    .container {
+        position: relative;
+    }
+
+    .login-fields {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+
+    <form method="post" action="{% url 'adminlogin' %}">
+        {% csrf_token %}
+        <div class="login-fields">
+            <label for="uname">USERNAME</label>
+            <input type="text" id="uname" name="uname" required/><br><br><br>
+            <label for="pwd">PASSWORD</label>
+            <input type="password" id="pwd" name="pwd" required/><br><br><br>
+            <input type="submit" value="Login"/>
+        </div>
+    </form>
+    <img src="https://media.istockphoto.com/id/1068482588/photo/donate-blood-group-doctor.jpg?s=2048x2048&w=is&k=20&c=9PymbIijDRk3yspJf-eMgOj4eQ_YNs1QjarS93Cktuk=" width="1560px" height="740px" alt="Bhargav"/>
+</div>
+{% endblock %}

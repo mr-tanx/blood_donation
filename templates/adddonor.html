@@ -1,0 +1,21 @@
+% extends 'index.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Donor Form{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <center>
+    <form action="{% url 'insertdonor' %}" method="post">
+         {% csrf_token %}
+         <b>Donor ID:</b>
+        <input type="Number" name="age"><br/><br/>
+        <b> Donor name:</b>
+         <input type="text" name="full_name"><br/>
+         <input type="submit" value="ADD DONOR"/>
+    </form>
+    </center>
+    {% endblock %}
+</body>
+</html>

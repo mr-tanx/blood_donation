@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Management</title>
+</head>
+<body>
+    <h1>Donor Management System</h1>
+
+    <!-- Insert Donor Form -->
+    <form action="{% url 'add_donor' %}" method="post">
+        {% csrf_token %}
+        <h2>Insert Donor</h2>
+        <label for="donor_name">Donor Name:</label><br>
+        <input type="text" id="donor_name" name="donor_name" required><br>
+        <label for="donor_age">Donor Age:</label><br>
+        <input type="number" id="donor_age" name="donor_age" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Delete Donor Form -->
+    <form action="{% url 'delete_donor' %}" method="post">
+        {% csrf_token %}
+        <h2>Delete Donor</h2>
+        <label for="delete_donor_age">Donor Age:</label><br>
+        <input type="number" id="delete_donor_age" name="delete_donor_age" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Search Donor Form -->
+    <form action="{% url 'search_donor' %}" method="post">
+        {% csrf_token %}
+        <h2>Search Donor</h2>
+        <label for="search_donor_age">Donor Age:</label><br>
+        <input type="number" id="search_donor_age" name="search_donor_age" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Update Donor Form -->
+    <form action="{% url 'update_donor' %}" method="post">
+        {% csrf_token %}
+        <h2>Update Donor Name</h2>
+        <label for="update_donor_age">Donor Age:</label><br>
+        <input type="number" id="update_donor_age" name="update_donor_age" required><br>
+        <label for="new_donor_name">New Donor Name:</label><br>
+        <input type="text" id="new_donor_name" name="new_donor_name" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

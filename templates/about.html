@@ -1,0 +1,166 @@
+{%  extends 'index.html' %}
+{% block 'body' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Blood Donation Drive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #d32f2f;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d32f2f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #b71c1c;
+        }
+        .blood-groups {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #d32f2f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">🩸 Online Blood Donation Drive 🩸</h1>
+        <div class="section">
+            <h2>Why Donate Blood?</h2>
+            <ul>
+                <li>Blood shortages can happen at any time, especially during emergencies.</li>
+                <li>Your donation can save up to three lives.</li>
+                <li>It's a simple and powerful way to give back to your community.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>How Can You Help?</h2>
+            <ul>
+                <li>Participate in our online blood donation drive.</li>
+                <li>Spread the word to friends, family, and colleagues.</li>
+                <li>Encourage others to register as blood donors.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Available Blood Camps Near Us</h2>
+            <table>
+                <tr>
+                    <th>Location</th>
+                    <th>Date & Time</th>
+                </tr>
+                <tr>
+                    <td>Mumbai, Maharashtra</td>
+                    <td>March 15, 2024, 10:00 AM - 4:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Delhi, Delhi</td>
+                    <td>March 20, 2024, 9:00 AM - 3:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Bengaluru, Karnataka</td>
+                    <td>March 25, 2024, 11:00 AM - 5:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Chennai, Tamil Nadu</td>
+                    <td>April 1, 2024, 10:30 AM - 4:30 PM</td>
+                </tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2>Blood Groups Information and Availability</h2>
+            <p class="blood-groups">A positive, A negative, B positive, B negative, AB positive, AB negative, O positive, O negative</p>
+            <p>Know your blood group and help save lives!</p>
+        </div>
+        <div class="section">
+            <h2>Compatible Blood Type Donors</h2>
+            <table>
+                <tr>
+                    <th>Blood Type</th>
+                    <th>Donate Blood To</th>
+                    <th>Receive Blood From</th>
+                </tr>
+                <tr>
+                    <td>A+</td>
+                    <td>A+ AB+</td>
+                    <td>A+ A- O+ O-</td>
+                </tr>
+                <tr>
+                    <td>O+</td>
+                    <td>O+ A+ B+ AB+</td>
+                    <td>O+ O-</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>B+ AB+</td>
+                    <td>B+ B- O+ O-</td>
+                </tr>
+                <tr>
+                    <td>AB+</td>
+                    <td>AB+</td>
+                    <td>Everyone</td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td>A+ A- AB+ AB-</td>
+                    <td>A- O-</td>
+                </tr>
+                <tr>
+                    <td>O-</td>
+                    <td>Everyone</td>
+                    <td>O-</td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td>B+ B- AB+ AB-</td>
+                    <td>B- O-</td>
+                </tr>
+                <tr>
+                    <td>AB-</td>
+                    <td>AB+ AB-</td>
+                    <td>AB- A- B- O-</td>
+                </tr>
+            </table>
+
+        <p>Let's paint the world red with the gift of life. Donate blood today!</p>
+    </div>
+</body>
+</html>
+
+
+{% endblock %}

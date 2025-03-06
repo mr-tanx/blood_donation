@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Donor</title>
+</head>
+<body>
+    <h1>Update Donor</h1>
+    <form action="{% url 'update_donor' donor_id %}" method="post">
+        {% csrf_token %}
+        <label for="full_name">Full Name:</label><br>
+        <input type="text" id="full_name" name="full_name" value="{{ donor.full_name }}"><br><br>
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" value="{{ donor.age }}"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value="{{ donor.email }}"><br><br>
+        <label for="blood_group">Blood Group:</label><br>
+        <input type="text" id="blood_group" name="blood_group" value="{{ donor.blood_group }}"><br><br>
+        <label for="gender">Gender:</label><br>
+        <input type="text" id="gender" name="gender" value="{{ donor.gender }}"><br><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" value="{{ donor.address }}"><br><br>
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

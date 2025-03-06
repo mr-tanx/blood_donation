@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Donor</title>
+</head>
+<body>
+    <h1>Search Donor</h1>
+    <p>Enter the Donor ID:</p>
+    <form action="{% url 'search_donor' %}" method="get">
+        <input type="text" name="donor_id">
+        <input type="submit" value="Search">
+    </form>
+    <div>
+        {% if donor %}
+            <p>Full Name: {{ donor.full_name }}</p>
+            <p>Age: {{ donor.age }}</p>
+            <p>Email: {{ donor.email }}</p>
+            <p>Blood Group: {{ donor.blood_group }}</p>
+            <p>Gender: {{ donor.gender }}</p>
+            <p>Address: {{ donor.address }}</p>
+        {% else %}
+            <p>No donor found with that ID.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

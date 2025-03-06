@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Donation Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+        .img-c1, .img-c2 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .img-c1 img, .img-c2 img {
+            width: 45%; /* Adjusted width to fit 2 images horizontally */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            color: #d32f2f;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .success-message {
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff0000;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/login">🩸</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url 'home'%}">Home</a>
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url 'donor'%}">Donor</a>
+                </li>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{%url 'recipient'%}">Recipient</a>
+                </li>
+
+
+
+                <li>
+                    <h3 align="center">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ONLINE BLOOD DONATION MANAGEMENT</h3>
+                </li>
+            </ul>
+        </div>
+
+        <a class="nav-link" href="{% url 'adminlogout' %}"><h4>Logout</h4></a>
+    </div>
+</nav>
+<br>
+<div class="img-c1">
+    <img src="https://media.istockphoto.com/id/1315395944/photo/experienced-phlebotomist-preparing-a-woman-for-blood-draw.jpg?s=612x612&w=0&k=20&c=MX1sfSztBJIiCW0wOqxDWxLuXWOxrlTvOO6azfF2buY=" height="500px" width="700px">
+    <img src="https://media.istockphoto.com/id/1445531404/photo/world-blood-donation-donor-day-and-save-life.jpg?s=612x612&w=0&k=20&c=BWWNmtNDQgd4kYClYJAEf9sH3W5gxeC46zUz0c9vfpg=" height="500px" width="700px">
+</div>
+<div class="img-c2">
+    <img src="https://media.istockphoto.com/id/1068482588/photo/donate-blood-group-doctor.jpg?s=612x612&w=0&k=20&c=fMMGby4lyTuCay0aNDrPpWkin7S2Q7LurTSdlXq4yo4=" height="500px" width="700px">
+    <img src="https://media.istockphoto.com/id/937685536/vector/blood-doner-day.jpg?s=612x612&w=0&k=20&c=f5lfl6n4uEV4xKxpJrFgvVJc8cbdc4LdjgSv7Vgjggc=" height="500px" width="700px">
+</div>
+
+</body>
+</html>
